@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.PersistableBundle
 import android.util.Log
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -53,8 +54,13 @@ class MainActivity : AppCompatActivity() {
         timeLeftText = findViewById(R.id.time_game)
         tapMeImage = findViewById(R.id.tab_me_image)
 
+        // animation
         // ketika klik image, akan menjalankan method incrementScore
-        tapMeImage.setOnClickListener { incrementScore() }
+        tapMeImage.setOnClickListener { v->
+            val bounceAnimation = AnimationUtils.loadAnimation(this, R.anim.bounce)
+            v.startAnimation(bounceAnimation)
+            incrementScore()
+        }
         Log.d(TAG, "onCreat called. Score is : $score")
 
         if(savedInstanceState != null) {

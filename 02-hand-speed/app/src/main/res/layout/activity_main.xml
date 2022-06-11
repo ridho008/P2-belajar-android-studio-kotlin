@@ -37,9 +37,8 @@
 
     <ImageView
         android:id="@+id/tab_me_image"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="160dp"
         android:src="@drawable/wow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,6 +46,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/score_game"
         app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="WELCOME TO GAME HANDSPEED"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toTopOf="@+id/tab_me_image"
+        app:layout_constraintEnd_toStartOf="@+id/tab_me_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score_game" />
 
     <!--    <Button-->
 <!--        android:id="@+id/button"-->
