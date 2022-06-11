@@ -1,0 +1,8 @@
+<resources>
+<!--  %1$d, meletakan angka (int  -->
+    <string name="app_name">HandSpeed</string>
+    <string name="tap_me_image">Tap Me!</string>
+    <string name="your_score">Score : %1$d</string>
+    <string name="time_left">Time : %1$d</string>
+    <string name="game_over_message">Time Up! Your Score Was : %1$d</string>
+</resources>
