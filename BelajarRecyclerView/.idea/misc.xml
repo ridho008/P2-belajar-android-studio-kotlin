@@ -3,9 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/ridho-surya/P2-belajar-android-studio-kotlin/01-hallo-duniaku/app/src/main/res/drawable/bg_solid.xml" value="0.131" />
-        <entry key="..\:/ridho-surya/P2-belajar-android-studio-kotlin/01-hallo-duniaku/app/src/main/res/drawable/btn_bg.xml" value="0.1465" />
-        <entry key="..\:/ridho-surya/P2-belajar-android-studio-kotlin/01-hallo-duniaku/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/ridho-surya/P2-belajar-android-studio-kotlin/BelajarRecyclerView/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/ridho-surya/P2-belajar-android-studio-kotlin/BelajarRecyclerView/app/src/main/res/layout/adapter_main.xml" value="0.5" />
       </map>
     </option>
   </component>
