@@ -22,7 +22,29 @@ class MainActivity : AppCompatActivity() {
 
         //imageAdapter()
 
-        textAdapter()
+        //textAdapter()
+
+        modelAdapter()
+    }
+
+    // membuat adapter dengan menggunakan model
+    private fun modelAdapter() {
+        val movies = listOf<MovieModel>(
+            MovieModel(1, "Black Panther", R.drawable.black_panther),
+            MovieModel(2, "Black Widow", R.drawable.black_widow),
+            MovieModel(3, "Hulk", R.drawable.hulk),
+            MovieModel(4, "SpiderMan", R.drawable.spider)
+        )
+
+        // listener dengan menggunakan model
+        val movieAdapter = MovieAdapter(movies, object : MovieAdapter.OnAdapterListener {
+            override fun onClick(movie: MovieModel) {
+                Log.e("MainActivity", movie.toString())
+                Toast.makeText(applicationContext, movie.id.toString(), Toast.LENGTH_SHORT).show()
+            }
+
+        })
+        findViewById<RecyclerView>(R.id.recyclerView).adapter = movieAdapter
     }
 
     public fun imageAdapter() {
