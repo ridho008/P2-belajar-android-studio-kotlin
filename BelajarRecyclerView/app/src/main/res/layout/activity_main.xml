@@ -10,13 +10,15 @@
 1.tools:listitem="@layout/adapter_main", view seperti apa tampilan listnya
 2.tools:itemCount="20", preview total itemnya
 3.app:spanCount="2", digunakan saat layoutManager adalah grid
+4.android:visibility="gone", menyembunyikan element
 -->
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:listitem="@layout/adapter_main"
+        tools:listitem="@layout/adapter_image"
         tools:itemCount="15"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="parent"
