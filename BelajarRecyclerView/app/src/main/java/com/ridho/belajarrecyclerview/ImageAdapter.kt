@@ -16,7 +16,6 @@ class ImageAdapter(
     }
 
     override fun onBindViewHolder(holder: ImageAdapter.ViewHolder, position: Int) {
-        // holder.text.text = listName[position].toString()
         holder.image.setImageResource(listImage[position])
     }
 

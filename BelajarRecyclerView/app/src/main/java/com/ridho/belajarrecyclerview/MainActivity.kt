@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
+import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +20,12 @@ class MainActivity : AppCompatActivity() {
         // menampilkan gambar melalui MainActivity
         // findViewById<ImageView>(R.id.imageView).setImageResource(R.drawable.black_widow)
 
+        //imageAdapter()
+
+        textAdapter()
+    }
+
+    public fun imageAdapter() {
         val images = listOf<Int>(
             R.drawable.black_panther,
             R.drawable.black_widow,
@@ -24,15 +34,23 @@ class MainActivity : AppCompatActivity() {
         )
 
         val imageAdapter = ImageAdapter(images)
+        // findViewById<RecyclerView>(R.id.recyclerView).layoutManager = LinearLayoutManager(this)
+        // set layout manager
+        // ketika tdk menggunakan layout manager di activity_main.xml
+//        findViewById<RecyclerView>(R.id.recyclerView).apply {
+//            layoutManager = GridLayoutManager(this@MainActivity, 2)
+//            adapter = imageAdapter
+//        }
+
         findViewById<RecyclerView>(R.id.recyclerView).adapter = imageAdapter
     }
 
     private fun textAdapter() {
         val names = listOf<String>(
-            "Nani",
-            "Toni",
-            "Rani",
-            "Wani"
+            "Nani", "Ronaldo",
+            "Toni", "Dewi",
+            "Rani", "Harun",
+            "Wani", "Wantani"
         )
 
         // jika data yang diambil tidak dapat, gunakan Log.e ini untuk men-debungging
@@ -45,7 +63,12 @@ class MainActivity : AppCompatActivity() {
             Log.e("MainActivity", name)
         }
 
-        val textAdapter = TextAdapter(names)
+        val textAdapter = TextAdapter(names, object : TextAdapter.OnAdapterListener {
+            override fun onClick(name: String) {
+                Toast.makeText(applicationContext, name, Toast.LENGTH_SHORT).show()
+            }
+
+        })
         findViewById<RecyclerView>(R.id.recyclerView).adapter = textAdapter
     }
 
